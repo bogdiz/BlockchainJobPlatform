@@ -1,0 +1,243 @@
+{
+	"id": "c42c5b2f58abfe50d05c4c34da153d04",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/IJobPayment.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IJobPayment {\r\n    function processPayment(address payable _employee, uint256 _amount) external payable;\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/IJobPayment.sol": {
+				"IJobPayment": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address payable",
+									"name": "_employee",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_amount",
+									"type": "uint256"
+								}
+							],
+							"name": "processPayment",
+							"outputs": [],
+							"stateMutability": "payable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"processPayment(address,uint256)": "0b63fe95"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_employee\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"processPayment\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/IJobPayment.sol\":\"IJobPayment\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IJobPayment.sol\":{\"keccak256\":\"0x14e6a9e29283c6fa320233446cbddd51f6862dece8322e2bded6fd94f7195671\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://82a5fb7a194fd1d73ac1f686ef886246f135dcad52bbde8585801898d4864330\",\"dweb:/ipfs/QmREWy7kx6omTPgzS6WgXqGUAqgH9aT2VC5dEPqFCWbSw6\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/IJobPayment.sol": {
+				"ast": {
+					"absolutePath": "contracts/IJobPayment.sol",
+					"exportedSymbols": {
+						"IJobPayment": [
+							9
+						]
+					},
+					"id": 10,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IJobPayment",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 9,
+							"linearizedBaseContracts": [
+								9
+							],
+							"name": "IJobPayment",
+							"nameLocation": "70:11:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "0b63fe95",
+									"id": 8,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "processPayment",
+									"nameLocation": "98:14:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 6,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 3,
+												"mutability": "mutable",
+												"name": "_employee",
+												"nameLocation": "129:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "113:25:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address_payable",
+													"typeString": "address payable"
+												},
+												"typeName": {
+													"id": 2,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "113:15:0",
+													"stateMutability": "payable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address_payable",
+														"typeString": "address payable"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "_amount",
+												"nameLocation": "148:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "140:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "140:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "112:44:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "173:0:0"
+									},
+									"scope": 9,
+									"src": "89:85:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 10,
+							"src": "60:117:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:146:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

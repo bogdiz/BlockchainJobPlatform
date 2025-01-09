@@ -1,0 +1,404 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_paymentContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "employer",
+						"type": "address"
+					}
+				],
+				"name": "EmployerRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "jobId",
+						"type": "uint256"
+					}
+				],
+				"name": "JobCompleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "jobId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "employer",
+						"type": "address"
+					}
+				],
+				"name": "JobCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "jobId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "employee",
+						"type": "address"
+					}
+				],
+				"name": "JobTaken",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salary",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_performance",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateBonus",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_salary",
+						"type": "uint256"
+					}
+				],
+				"name": "createJob",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "employeeJobs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "employers",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_employee",
+						"type": "address"
+					}
+				],
+				"name": "getEmployeeJobs",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_jobId",
+						"type": "uint256"
+					}
+				],
+				"name": "getJob",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "employee",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "employer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salary",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct JobPlatform.Job",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "jobCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "jobs",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "employee",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "employer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salary",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paymentContract",
+				"outputs": [
+					{
+						"internalType": "contract IJobPayment",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "registerEmployer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_jobId",
+						"type": "uint256"
+					}
+				],
+				"name": "takeJob",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/JobPlatform.sol": "JobPlatform"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IJobPayment.sol": {
+			"keccak256": "0x14e6a9e29283c6fa320233446cbddd51f6862dece8322e2bded6fd94f7195671",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82a5fb7a194fd1d73ac1f686ef886246f135dcad52bbde8585801898d4864330",
+				"dweb:/ipfs/QmREWy7kx6omTPgzS6WgXqGUAqgH9aT2VC5dEPqFCWbSw6"
+			]
+		},
+		"contracts/JobPlatform.sol": {
+			"keccak256": "0x6c6f744c377743b63c5e22a3579cf63484ab541d55b4b40abd86aba57b9056dc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a028b131abbd3f40f8c31e7085f764491912614744ecbb8f9ee1763f334562d0",
+				"dweb:/ipfs/QmV8GpQFwXWARzHHJNsDj8BB5jLKPrRQJdBSknoXaiSUsC"
+			]
+		}
+	},
+	"version": 1
+}

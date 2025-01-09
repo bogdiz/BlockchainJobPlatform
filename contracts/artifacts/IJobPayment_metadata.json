@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_employee",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "processPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IJobPayment.sol": "IJobPayment"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IJobPayment.sol": {
+			"keccak256": "0x14e6a9e29283c6fa320233446cbddd51f6862dece8322e2bded6fd94f7195671",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82a5fb7a194fd1d73ac1f686ef886246f135dcad52bbde8585801898d4864330",
+				"dweb:/ipfs/QmREWy7kx6omTPgzS6WgXqGUAqgH9aT2VC5dEPqFCWbSw6"
+			]
+		}
+	},
+	"version": 1
+}
