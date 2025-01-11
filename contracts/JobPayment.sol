@@ -2,8 +2,6 @@
 pragma solidity ^0.8.0;
 
 import "./IJobPayment.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-
 
 contract JobPayment is IJobPayment {
     address public owner;
