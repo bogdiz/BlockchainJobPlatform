@@ -1,0 +1,155 @@
+/* General styling for the job container */
+.job-container {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for creating a job form */
+  .create-job {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .create-job h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .create-job p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-field:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Job List Styling */
+  .job-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .job-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .job-item {
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .job-header h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .status.active {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .status.completed {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .disable-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .disable-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+
+  .join-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .join-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .join-btn:active {
+    background-color: #388e3c;
+  }
+  
+  .joined {
+    margin-right: 2vw;
+    font-size: 16px;
+    color: #4CAF50;
+  }
