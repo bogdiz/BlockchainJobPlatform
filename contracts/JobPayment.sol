@@ -3,6 +3,7 @@ pragma solidity ^0.8.0;
 
 import "./IJobPayment.sol";
 
+
 contract JobPayment is IJobPayment {
     address public owner;
     mapping(address => uint256) public payments;
@@ -20,7 +21,6 @@ contract JobPayment is IJobPayment {
     
     receive() external payable {}
     
-    // Implementarea interfeței pentru procesarea plăților
     function processPayment(address payable _employee, uint256 _amount) 
         external
         payable
@@ -34,7 +34,6 @@ contract JobPayment is IJobPayment {
         emit PaymentProcessed(_employee, _amount);
     }
     
-    // Funcție pentru retragerea ETH-ului rămas
     function withdrawBalance() external onlyOwner {
         uint256 balance = address(this).balance;
         payable(owner).transfer(balance);

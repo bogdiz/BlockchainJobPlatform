@@ -1,11 +1,17 @@
-import JobPlatform from '../../artifacts/contracts/JobPlatform.sol/JobPlatform.json'
-import { ethers } from 'ethers';
-require("dotenv").config({path: "../../config.env" });
+import { Web3Provider } from './web3context';
+import React from 'react';
+import JobComponent from './JobComponent';
 
-const JOB_PLATFORM_ADDRESS = "0x00b43Ee6cC0dAC32113E70c4cbD279fEBdBE70ec"
 
 function App() {
-  
+  return (
+    <Web3Provider>
+      <div>
+        <h1 style={{paddingLeft: 20 + 'px'}}>Blockchain Job Platform</h1>
+        <JobComponent />
+      </div>
+    </Web3Provider>
+  );
 }
 
 export default App;
