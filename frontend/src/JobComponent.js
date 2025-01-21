@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Web3Context } from './web3context';
-import { ethers } from 'ethers';
 import './JobComponent.css';
+import { useNavigate } from 'react-router-dom'
 
 
 const JobComponent = () => {
+  const navigate = useNavigate()
   const { account, balance, contract } = useContext(Web3Context);
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
@@ -20,7 +21,6 @@ const JobComponent = () => {
           const job = await contract.jobs(i);
           jobs.push(job);
         }
-        console.log(jobs);
         setJobList(jobs);
       } catch (err) {
         console.error(err);
@@ -54,19 +54,6 @@ const JobComponent = () => {
         fetchJobs();
       } catch (err) {
         alert(`Error deactivating job. ${err}`);
-      }
-    }
-  };
-
-  const joinJob = async (jobId) => {
-    if (contract) {
-      try {
-        const tx = await contract.takeJob(jobId);
-        await tx.wait();
-        alert('You successfully joined the job!');
-        fetchJobs();
-      } catch (err) {
-        alert(`Error joining job. ${err}`)
       }
     }
   };
@@ -112,37 +99,53 @@ const JobComponent = () => {
       </div>
 
       <div className="job-list">
-        <h2>Job List</h2>
-        <ul className="job-items">
-          {jobList.map((job, index) => (
-            <li key={index} className="job-item">
-              <div className="job-header">
-                <h3>{job.title}</h3>
-                {job.employee === account && <span className="joined"> Joined </span>}
-
-              </div>
-              <p>{job.description}</p>
-              <p><strong>Salary:</strong> {job.salary } ETH</p>
-              <p><strong>Employer:</strong> {job.employer}</p>
-              <div>
-              {account === job.employer && <button 
-                className="disable-btn" 
-                onClick={() => deleteJob(index)}
+  <h2>Job List</h2>
+  <ul className="job-items">
+    {jobList.map((job, index) => (
+      // Check if job.title exists before rendering the content
+      job.title && (
+        <li key={index} className="job-item">
+          <div className="job-header">
+            <div className="flex-row">
+              <h3>{job.title}</h3>
+              <button
+                className="pretty-button"
+                onClick={() =>
+                  navigate('/job', {
+                    state: {
+                      title: job.title,
+                      description: job.description,
+                      salary: job.salary,
+                      employer: job.employer,
+                      jobId: index,
+                    },
+                  })
+                }
               >
-              Delete
-              </button>}
-              {account != job.employer && account !== job.employee && <button
-                className="join-btn"
-                onClick={() => joinJob(index)}
-              >
-              Join
+                View Details
               </button>
-              }
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+            </div>
+          </div>
+          <p>{job.description}</p>
+          <p>
+            <strong>Salary:</strong> {job.salary} ETH
+          </p>
+          <p>
+            <strong>Employer:</strong> {job.employer}
+          </p>
+          <div>
+            {account === job.employer && (
+              <button className="disable-btn" onClick={() => deleteJob(index)}>
+                Delete
+              </button>
+            )}
+          </div>
+        </li>
+      )
+    ))}
+  </ul>
+</div>
+
     </div>
   );
 };

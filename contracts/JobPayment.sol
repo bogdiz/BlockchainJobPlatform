@@ -26,13 +26,11 @@ contract JobPayment is IJobPayment {
         payable
         override
     {
-        require(msg.value >= _amount, "Insufficient payment amount");
-        
         payments[_employee] += _amount;
         _employee.transfer(_amount);
         
         emit PaymentProcessed(_employee, _amount);
-    }
+    }   
     
     function withdrawBalance() external onlyOwner {
         uint256 balance = address(this).balance;
