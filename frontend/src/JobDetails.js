@@ -41,7 +41,9 @@ const JobDetails = () => {
     if (contract) {
       try {
         const amountInWei = parseEther(amount.toString());
-        const tx = await contract.processPayment(address, amountInWei);
+        const tx = await jobPaymentContract.processPayment(address, amountInWei, {
+          value: amountInWei,
+        });
         await tx.wait();
       } catch(err) {
         alert(`Payment error ${err.message}`);
