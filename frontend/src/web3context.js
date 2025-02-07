@@ -13,10 +13,10 @@ const Web3Provider = ({ children }) => {
   const [provider, setProvider] = useState(null);
 
   const contractABI = JobPlatformABI;
-  const contractAddress = "0x610178dA211FEF7D417bC0e6FeD39F05609AD788";
+  const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
   const contractJobPaymentABI = JobPaymentABI
-  const contractJobPaymentAddress = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318"
+  const contractJobPaymentAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 
   useEffect(() => {
     if (window.ethereum) {

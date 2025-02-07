@@ -214,6 +214,19 @@
   },
   {
     "inputs": [],
+    "name": "getPaymentContract",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "jobCount",
     "outputs": [
       {

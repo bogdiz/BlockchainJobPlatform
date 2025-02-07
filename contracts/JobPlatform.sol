@@ -90,12 +90,15 @@ contract JobPlatform {
         paymentContract.processPayment(_employee, _amount);
     }
 
-    // Pure
     function calculateBonus(uint256 _salary, uint256 _performance) 
         public 
         pure 
         returns (uint256) 
     {
         return (_salary * _performance) / 100;
+    }
+
+    function getPaymentContract() external view returns (address) {
+        return address(paymentContract);
     }
 }
